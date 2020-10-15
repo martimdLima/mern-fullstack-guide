@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-15 qui 18:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MERN Stack - The MERN Fullstack Guide</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Martim Lima" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">MERN Stack - The MERN Fullstack Guide</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0edc0cc">MERN Fullstack Guide</a></li>
+<li><a href="#orgeaef612">How does the MERN stack work?</a>
+<ul>
+<li><a href="#orgc411161">React.js Front End</a></li>
+<li><a href="#orgdfc4f3f">Express.js and Node.js Server Tier</a></li>
+<li><a href="#org22527bb">MongoDB Database Tier</a></li>
+<li><a href="#orgf166d63">REST vs GraphQL</a></li>
+</ul>
+</li>
+<li><a href="#org1dba49b">Useful Resources &amp; Links</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org0edc0cc" class="outline-2">
+<h2 id="org0edc0cc">MERN Fullstack Guide</h2>
+<div class="outline-text-2" id="text-org0edc0cc">
+<p>
+MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+</p>
+<ul class="org-ul">
+<li>MongoDB - document database</li>
+<li>Express(.js) - Node.js web framework</li>
+<li>React(.js) - a client-side JavaScript framework</li>
+<li>Node(.js) - the premier JavaScript web server</li>
+</ul>
+
+<p>
+MERN is one of several variations of the MEAN stack (MongoDB Express Angular Node), where the traditional Angular.js frontend framework is replaced with React.js. Other variants include MEVN (MongoDB, Express, Vue, Node), and really any frontend JavaScript framework can work.
+</p>
+
+<p>
+Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeaef612" class="outline-2">
+<h2 id="orgeaef612">How does the MERN stack work?</h2>
+<div class="outline-text-2" id="text-orgeaef612">
+<p>
+The MERN architecture allows you to easily construct a 3-tier architecture (frontend, backend, database) entirely using JavaScript and JSON.
+</p>
+
+
+<div id="org5c14d1d" class="figure">
+<p><img src="https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png" alt="mern stack" width="50%" height="50%" title="Mern Stack Architecture" align="right" />
+</p>
+<p><span class="figure-number">Figure 1: </span>MERN Stack Architecture</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgc411161" class="outline-3">
+<h3 id="orgc411161">React.js Front End</h3>
+<div class="outline-text-3" id="text-orgc411161">
+<p>
+The top tier of the MERN stack is React.js, the declarative JavaScript framework for creating dynamic client-side applications in HTML. React lets you build up complex interfaces through simple Components, connect them to data on your backend server, and render them as HTML.
+</p>
+
+<p>
+React’s strong suit is handling stateful, data-driven interfaces with minimal code and minimal pain, and it has all the bells and whistles you’d expect from a modern web framework: great support for forms, error handling, events, lists, and more.
+</p>
+</div>
+
+<div id="outline-container-org9b12bcc" class="outline-4">
+<h4 id="org9b12bcc">JSX</h4>
+<div class="outline-text-4" id="text-org9b12bcc">
+<p>
+JSX is a syntax extension to JavaScript. JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.
+</p>
+
+<p>
+React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.
+</p>
+
+<p>
+Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.
+</p>
+
+<p>
+React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10cc03b" class="outline-4">
+<h4 id="org10cc03b">event.preventDefault()</h4>
+<div class="outline-text-4" id="text-org10cc03b">
+<p>
+The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+</p>
+
+<blockquote>
+<p>
+React’s actual event listener is also at the root of the document, meaning the click event has already bubbled to the root. You can use event.nativeEvent.stopImmediatePropagation to prevent other event listeners from firing, but order of execution is not guaranteed. &#x2014; ssorallen in <a href="https://stackoverflow.com/questions/24415631/reactjs-syntheticevent-stoppropagation-only-works-with-react-events#comment37772453_24415631">ReactJS SyntheticEvent stopPropagation() only works with React events?</a>
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+React doesn’t actually attach event handlers to the nodes themselves. When React starts up, it starts listening for all events at the top level using a single event listener. &#x2014;React Official Docs
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org18b2426" class="outline-4">
+<h4 id="org18b2426">State and Lifecycle</h4>
+<div class="outline-text-4" id="text-org18b2426">
+<p>
+The state is an instance of React Component Class can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component.
+</p>
+
+<p>
+<b>Difference of Props and State.</b>
+</p>
+
+<p>
+We have already learned about Props and we got to know that Props is also an object that holds information to control the behavior of that particular component, sounds familiar to State indeed but props and states are nowhere near to be same. Let us differentiate the two.
+</p>
+
+<ul class="org-ul">
+<li>Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.</li>
+<li>States can only be used in Class Components while Props don’t have this limitation.</li>
+<li>While Props are set by the parent component, State is generally updated by event handlers. For example, let us consider the toggle the theme of the GeeksforGeeks {IDE} page. It can be implemented using State where the probable values of the State can be either light or dark and upon selection, the IDE changes its color.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdfc4f3f" class="outline-3">
+<h3 id="orgdfc4f3f">Express.js and Node.js Server Tier</h3>
+<div class="outline-text-3" id="text-orgdfc4f3f">
+<p>
+The next level down is the Express.js server-side framework, running inside a Node.js server. Express.js bills itself as a “fast, unopinionated, minimalist web framework for Node.js,” and that is indeed exactly what it is. Express.js has powerful models for URL routing (matching an incoming URL with a server function), and handling HTTP requests and responses.
+</p>
+
+<p>
+By making XML HTTP Requests (XHRs) or GETs or POSTs from your Angular.js front-end, you can connect to Express.js functions that power your application. Those functions in turn use MongoDB’s Node.js drivers, either via callbacks for using Promises, to access and update data in your MongoDB database.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22527bb" class="outline-3">
+<h3 id="org22527bb">MongoDB Database Tier</h3>
+<div class="outline-text-3" id="text-org22527bb">
+<p>
+If your application stores any data (user profiles, content, comments, uploads, events, etc.), then you’re going to want a database that’s just as easy to work with as Angular, Express, and Node.
+</p>
+
+<p>
+That’s where MongoDB comes in: JSON documents created in your Angular.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. Again, if you’re building in the cloud, you’ll want to look at Atlas. If you’re looking to set up your own MERN stack, read on!
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf166d63" class="outline-3">
+<h3 id="orgf166d63">REST vs GraphQL</h3>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org1dba49b" class="outline-2">
+<h2 id="org1dba49b">Useful Resources &amp; Links</h2>
+<div class="outline-text-2" id="text-org1dba49b">
+<ul class="org-ul">
+<li><a href="https://reactjs.org/docs/getting-started.html">Official React Docs</a></li>
+
+<li><a href="https://nodejs.org/en/docs/">Official Node.js Docs</a></li>
+
+<li><a href="https://expressjs.com/">Official Express.js Docs</a></li>
+
+<li><a href="https://docs.mongodb.com/">Official MongoDB Docs</a></li>
+
+<li><a href="https://www.geeksforgeeks.org/comparison-between-graphql-restful-architecture/">Comparison between GraphQL &amp; RESTful Architecture</a></li>
+
+<li><a href="https://www.apollographql.com/blog/graphql-vs-rest-5d425123e34b/">GraphQL vs. REST</a></li>
+
+<li><a href="https://goodapi.co/blog/rest-vs-graphql">REST vs. GraphQL: A Critical Review</a></li>
+
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 10-10-2020</p>
+<p class="author">Author: Martim Lima</p>
+<p class="date">Created: 2020-10-15 qui 18:06</p>
+</div>
+</body>
+</html>
