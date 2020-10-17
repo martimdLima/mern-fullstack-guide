@@ -1,14 +1,15 @@
-- [MERN Fullstack Guide](#org5c6c716)
-- [How does the MERN stack work?](#org7bd2e12)
-  - [React.js Front End](#orge4ab1f8)
-  - [Express.js and Node.js Server Tier](#orgfd17e15)
-  - [MongoDB Database Tier](#org82a6dce)
-  - [REST vs GraphQL](#org99523ef)
-- [Useful Resources & Links](#org7f1262a)
+- [MERN Fullstack Guide](#org27849a9)
+- [How does the MERN stack work?](#org7912ef4)
+  - [React.js Front End](#orgf85d56f)
+  - [Express.js and Node.js Server Tier](#org6d871bd)
+  - [MongoDB Database Tier](#orga76f86c)
+  - [REST vs GraphQL](#orgb26a36d)
+- [Dependencies used:](#orge1879fe)
+- [Useful Resources & Links](#orgd75bf36)
 
 
 
-<a id="org5c6c716"></a>
+<a id="org27849a9"></a>
 
 # MERN Fullstack Guide
 
@@ -24,7 +25,7 @@ MERN is one of several variations of the MEAN stack (MongoDB Express Angular Nod
 Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.
 
 
-<a id="org7bd2e12"></a>
+<a id="org7912ef4"></a>
 
 # How does the MERN stack work?
 
@@ -33,7 +34,7 @@ The MERN architecture allows you to easily construct a 3-tier architecture (fron
 ![img](https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png "MERN Stack Architecture")
 
 
-<a id="orge4ab1f8"></a>
+<a id="orgf85d56f"></a>
 
 ## React.js Front End
 
@@ -75,7 +76,7 @@ We have already learned about Props and we got to know that Props is also an obj
 -   While Props are set by the parent component, State is generally updated by event handlers. For example, let us consider the toggle the theme of the GeeksforGeeks {IDE} page. It can be implemented using State where the probable values of the State can be either light or dark and upon selection, the IDE changes its color.
 
 
-<a id="orgfd17e15"></a>
+<a id="org6d871bd"></a>
 
 ## Express.js and Node.js Server Tier
 
@@ -84,7 +85,7 @@ The next level down is the Express.js server-side framework, running inside a No
 By making XML HTTP Requests (XHRs) or GETs or POSTs from your Angular.js front-end, you can connect to Express.js functions that power your application. Those functions in turn use MongoDB’s Node.js drivers, either via callbacks for using Promises, to access and update data in your MongoDB database.
 
 
-<a id="org82a6dce"></a>
+<a id="orga76f86c"></a>
 
 ## MongoDB Database Tier
 
@@ -93,12 +94,41 @@ If your application stores any data (user profiles, content, comments, uploads, 
 That’s where MongoDB comes in: JSON documents created in your Angular.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. Again, if you’re building in the cloud, you’ll want to look at Atlas. If you’re looking to set up your own MERN stack, read on!
 
 
-<a id="org99523ef"></a>
+<a id="orgb26a36d"></a>
 
 ## REST vs GraphQL
 
+**REST**: It is an acronym for **Representational State Transfer**. REST is an API design style architecture to create web services(APIs). Features of RESTful architecture:
 
-<a id="org7f1262a"></a>
+-   REST server implementation is simpler than its counterpart SOAP i.e. one of the reasons why it is popular among new developers.
+-   REST is stateless, the server doesn’t store the state of a client in form of sessions or anything else. Every request is a new request.
+-   REST is supported by the JSON and XML, supported by both helps the developer those who are comfortable with one XML or JSON.
+-   Error message occurrence is meaningful the developer can easily guess the fault.
+
+**GraphQL**: GraphQL was initially developed by Facebook internally for their own use and was later released to people in 2015. It is a **manipulation and data query language for APIs**. It is a runtime for responding to incoming API requests.
+
+Features of GraphQL architecture:
+
+-   GraphQL has only 1 endpoint, hence easy to manage.
+-   Precise fetching of data. As fields are passed along with the GraphQL operation, only the fields that are required are returned.
+-   Shipping different versions of API is as simple as editing the previous code.
+-   GraphQL APIs are client-driven. This means that the client decides the structure of API, in contrast to REST where the server decides the API implementation.
+
+Similarities between REST and GraphQL:
+
+-   They have both the ability to return JSON formatted data.
+-   REST and GraphQL can fetch data with an HTTP GET method. However, the GraphQL API server usually has only one POST endpoint. Nevertheless, it is possible to use GET with GraphQL to fetch data.
+-   REST and GraphQL identify every entity as a resource. Every resource has an ID associated with it.
+
+
+<a id="orge1879fe"></a>
+
+# Dependencies used:
+
+-   react-router-dom
+
+
+<a id="orgd75bf36"></a>
 
 # Useful Resources & Links
 

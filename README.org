@@ -82,8 +82,28 @@ If your application stores any data (user profiles, content, comments, uploads, 
 That’s where MongoDB comes in: JSON documents created in your Angular.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. Again, if you’re building in the cloud, you’ll want to look at Atlas. If you’re looking to set up your own MERN stack, read on!
 
 ** REST vs GraphQL
+*REST*: It is an acronym for *Representational State Transfer*. REST is an API design style architecture to create web services(APIs).
+Features of RESTful architecture:
++ REST server implementation is simpler than its counterpart SOAP i.e. one of the reasons why it is popular among new developers.
++ REST is stateless, the server doesn’t store the state of a client in form of sessions or anything else. Every request is a new request.
++ REST is supported by the JSON and XML, supported by both helps the developer those who are comfortable with one XML or JSON.
++ Error message occurrence is meaningful the developer can easily guess the fault.
 
+*GraphQL*: GraphQL was initially developed by Facebook internally for their own use and was later released to people in 2015. It is a *manipulation and data query language for APIs*. It is a runtime for responding to incoming API requests.
 
+Features of GraphQL architecture:
++ GraphQL has only 1 endpoint, hence easy to manage.
++ Precise fetching of data. As fields are passed along with the GraphQL operation, only the fields that are required are returned.
++ Shipping different versions of API is as simple as editing the previous code.
++ GraphQL APIs are client-driven. This means that the client decides the structure of API, in contrast to REST where the server decides the API implementation.
+
+Similarities between REST and GraphQL:
++ They have both the ability to return JSON formatted data.
++ REST and GraphQL can fetch data with an HTTP GET method. However, the GraphQL API server usually has only one POST endpoint. Nevertheless, it is possible to use GET with GraphQL to fetch data.
++ REST and GraphQL identify every entity as a resource. Every resource has an ID associated with it.
+
+* Dependencies used:
++ react-router-dom
 
 
 * Useful Resources & Links
