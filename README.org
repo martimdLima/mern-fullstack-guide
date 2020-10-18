@@ -102,9 +102,13 @@ Similarities between REST and GraphQL:
 + REST and GraphQL can fetch data with an HTTP GET method. However, the GraphQL API server usually has only one POST endpoint. Nevertheless, it is possible to use GET with GraphQL to fetch data.
 + REST and GraphQL identify every entity as a resource. Every resource has an ID associated with it.
 
-* Dependencies used:
+* Dependencies used
 + react-router-dom
++ react-transition-group
++ mapbox-gl
 
+* Third Party Services Used
++ MapBox
 
 * Useful Resources & Links
 
@@ -122,4 +126,18 @@ Similarities between REST and GraphQL:
 
 + [[https://goodapi.co/blog/rest-vs-graphql][REST vs. GraphQL: A Critical Review]]
 
-+
++ [[https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541][Stateful vs. Stateless Functional Components in React]]
+
++ [[https://www.mapbox.com/][Mapbox]]
+
++ [[https://docs.mapbox.com/mapbox-gl-js/api/][Mapbox GL JS Documentation]]
+
++ [[https://dev.to/laney/react-mapbox-beginner-tutorial-2e35][React + Mapbox beginner tutorial]]
+
++ [[https://reactjs.org/docs/hooks-intro.html][React Hooks]]
+
++ [[https://reactjs.org/docs/hooks-custom.html][Creating Custom Hooks]]
+
++  [[https://nodejs.org/en/docs/][Official Node.js Docs]]
+
++ [[https://expressjs.com/][Official Express.js Docs]]

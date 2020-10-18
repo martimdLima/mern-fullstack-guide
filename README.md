@@ -1,15 +1,16 @@
-- [MERN Fullstack Guide](#org27849a9)
-- [How does the MERN stack work?](#org7912ef4)
-  - [React.js Front End](#orgf85d56f)
-  - [Express.js and Node.js Server Tier](#org6d871bd)
-  - [MongoDB Database Tier](#orga76f86c)
-  - [REST vs GraphQL](#orgb26a36d)
-- [Dependencies used:](#orge1879fe)
-- [Useful Resources & Links](#orgd75bf36)
+- [MERN Fullstack Guide](#org9d6d2f3)
+- [How does the MERN stack work?](#org7188e71)
+  - [React.js Front End](#org3208f6a)
+  - [Express.js and Node.js Server Tier](#orgd1f09ce)
+  - [MongoDB Database Tier](#org7532081)
+  - [REST vs GraphQL](#org88e4d36)
+- [Dependencies used](#orgc3ff357)
+- [Third Party Services Used](#orgd8df921)
+- [Useful Resources & Links](#org807aaef)
 
 
 
-<a id="org27849a9"></a>
+<a id="org9d6d2f3"></a>
 
 # MERN Fullstack Guide
 
@@ -25,7 +26,7 @@ MERN is one of several variations of the MEAN stack (MongoDB Express Angular Nod
 Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.
 
 
-<a id="org7912ef4"></a>
+<a id="org7188e71"></a>
 
 # How does the MERN stack work?
 
@@ -34,7 +35,7 @@ The MERN architecture allows you to easily construct a 3-tier architecture (fron
 ![img](https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png "MERN Stack Architecture")
 
 
-<a id="orgf85d56f"></a>
+<a id="org3208f6a"></a>
 
 ## React.js Front End
 
@@ -76,7 +77,7 @@ We have already learned about Props and we got to know that Props is also an obj
 -   While Props are set by the parent component, State is generally updated by event handlers. For example, let us consider the toggle the theme of the GeeksforGeeks {IDE} page. It can be implemented using State where the probable values of the State can be either light or dark and upon selection, the IDE changes its color.
 
 
-<a id="org6d871bd"></a>
+<a id="orgd1f09ce"></a>
 
 ## Express.js and Node.js Server Tier
 
@@ -85,7 +86,7 @@ The next level down is the Express.js server-side framework, running inside a No
 By making XML HTTP Requests (XHRs) or GETs or POSTs from your Angular.js front-end, you can connect to Express.js functions that power your application. Those functions in turn use MongoDB’s Node.js drivers, either via callbacks for using Promises, to access and update data in your MongoDB database.
 
 
-<a id="orga76f86c"></a>
+<a id="org7532081"></a>
 
 ## MongoDB Database Tier
 
@@ -94,7 +95,7 @@ If your application stores any data (user profiles, content, comments, uploads, 
 That’s where MongoDB comes in: JSON documents created in your Angular.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. Again, if you’re building in the cloud, you’ll want to look at Atlas. If you’re looking to set up your own MERN stack, read on!
 
 
-<a id="orgb26a36d"></a>
+<a id="org88e4d36"></a>
 
 ## REST vs GraphQL
 
@@ -121,14 +122,23 @@ Similarities between REST and GraphQL:
 -   REST and GraphQL identify every entity as a resource. Every resource has an ID associated with it.
 
 
-<a id="orge1879fe"></a>
+<a id="orgc3ff357"></a>
 
-# Dependencies used:
+# Dependencies used
 
 -   react-router-dom
+-   react-transition-group
+-   mapbox-gl
 
 
-<a id="orgd75bf36"></a>
+<a id="orgd8df921"></a>
+
+# Third Party Services Used
+
+-   MapBox
+
+
+<a id="org807aaef"></a>
 
 # Useful Resources & Links
 
@@ -146,4 +156,18 @@ Similarities between REST and GraphQL:
 
 -   [REST vs. GraphQL: A Critical Review](https://goodapi.co/blog/rest-vs-graphql)
 
--
+-   [Stateful vs. Stateless Functional Components in React](https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541)
+
+-   [Mapbox](https://www.mapbox.com/)
+
+-   [Mapbox GL JS Documentation](https://docs.mapbox.com/mapbox-gl-js/api/)
+
+-   [React + Mapbox beginner tutorial](https://dev.to/laney/react-mapbox-beginner-tutorial-2e35)
+
+-   [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+
+-   [Creating Custom Hooks](https://reactjs.org/docs/hooks-custom.html)
+
+-   [Official Node.js Docs](https://nodejs.org/en/docs/)
+
+-   [Official Express.js Docs](https://expressjs.com/)
