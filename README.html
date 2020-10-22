@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-10-18 dom 17:52 -->
+<!-- 2020-10-20 ter 14:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MERN Stack - The MERN Fullstack Guide</title>
@@ -231,26 +231,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7110032">MERN Fullstack Guide</a></li>
-<li><a href="#orgd6f5ead">How does the MERN stack work?</a>
+<li><a href="#org9163eff">MERN Fullstack Guide</a></li>
+<li><a href="#org3c11981">How does the MERN stack work?</a>
 <ul>
-<li><a href="#orga03b0e8">React.js Front End</a></li>
-<li><a href="#orgab50e9c">Express.js and Node.js Server Tier</a></li>
-<li><a href="#orga235b72">MongoDB Database Tier</a></li>
-<li><a href="#org8ada565">REST vs GraphQL</a></li>
+<li><a href="#org4b6f11c">React.js Front End</a></li>
+<li><a href="#org131d9af">Express.js and Node.js Server Tier</a></li>
+<li><a href="#org1c45097">MongoDB Database Tier</a></li>
+<li><a href="#org02c9831">REST vs GraphQL</a></li>
 </ul>
 </li>
-<li><a href="#org8e11dd1">Dependencies used</a></li>
-<li><a href="#org17e4a0f">Third Party Services Used</a></li>
-<li><a href="#org49d8e92">Useful Resources &amp; Links</a></li>
+<li><a href="#orgacec5d4">Dependencies used</a></li>
+<li><a href="#org8115233">Third Party Services Used</a></li>
+<li><a href="#orgce1ee84">Useful Resources &amp; Links</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org7110032" class="outline-2">
-<h2 id="org7110032">MERN Fullstack Guide</h2>
-<div class="outline-text-2" id="text-org7110032">
+<div id="outline-container-org9163eff" class="outline-2">
+<h2 id="org9163eff">MERN Fullstack Guide</h2>
+<div class="outline-text-2" id="text-org9163eff">
 <p>
 MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
 </p>
@@ -271,15 +271,15 @@ Express and Node make up the middle (application) tier. Express.js is a server-s
 </div>
 </div>
 
-<div id="outline-container-orgd6f5ead" class="outline-2">
-<h2 id="orgd6f5ead">How does the MERN stack work?</h2>
-<div class="outline-text-2" id="text-orgd6f5ead">
+<div id="outline-container-org3c11981" class="outline-2">
+<h2 id="org3c11981">How does the MERN stack work?</h2>
+<div class="outline-text-2" id="text-org3c11981">
 <p>
 The MERN architecture allows you to easily construct a 3-tier architecture (frontend, backend, database) entirely using JavaScript and JSON.
 </p>
 
 
-<div id="org7e0895d" class="figure">
+<div id="org5e8d8e2" class="figure">
 <p><img src="https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png" alt="mern stack" width="50%" height="50%" title="Mern Stack Architecture" align="right" />
 </p>
 <p><span class="figure-number">Figure 1: </span>MERN Stack Architecture</p>
@@ -287,9 +287,9 @@ The MERN architecture allows you to easily construct a 3-tier architecture (fron
 </div>
 
 
-<div id="outline-container-orga03b0e8" class="outline-3">
-<h3 id="orga03b0e8">React.js Front End</h3>
-<div class="outline-text-3" id="text-orga03b0e8">
+<div id="outline-container-org4b6f11c" class="outline-3">
+<h3 id="org4b6f11c">React.js Front End</h3>
+<div class="outline-text-3" id="text-org4b6f11c">
 <p>
 The top tier of the MERN stack is React.js, the declarative JavaScript framework for creating dynamic client-side applications in HTML. React lets you build up complex interfaces through simple Components, connect them to data on your backend server, and render them as HTML.
 </p>
@@ -299,9 +299,9 @@ React’s strong suit is handling stateful, data-driven interfaces with minimal 
 </p>
 </div>
 
-<div id="outline-container-org48bea14" class="outline-4">
-<h4 id="org48bea14">JSX</h4>
-<div class="outline-text-4" id="text-org48bea14">
+<div id="outline-container-org9c70806" class="outline-4">
+<h4 id="org9c70806">JSX</h4>
+<div class="outline-text-4" id="text-org9c70806">
 <p>
 JSX is a syntax extension to JavaScript. JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.
 </p>
@@ -320,9 +320,9 @@ React doesn’t require using JSX, but most people find it helpful as a visual a
 </div>
 </div>
 
-<div id="outline-container-org061734e" class="outline-4">
-<h4 id="org061734e">event.preventDefault()</h4>
-<div class="outline-text-4" id="text-org061734e">
+<div id="outline-container-orgeaa0916" class="outline-4">
+<h4 id="orgeaa0916">event.preventDefault()</h4>
+<div class="outline-text-4" id="text-orgeaa0916">
 <p>
 The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 </p>
@@ -341,9 +341,9 @@ React doesn’t actually attach event handlers to the nodes themselves. When Rea
 </div>
 </div>
 
-<div id="outline-container-org3ddeaf5" class="outline-4">
-<h4 id="org3ddeaf5">State and Lifecycle</h4>
-<div class="outline-text-4" id="text-org3ddeaf5">
+<div id="outline-container-org8398cdd" class="outline-4">
+<h4 id="org8398cdd">State and Lifecycle</h4>
+<div class="outline-text-4" id="text-org8398cdd">
 <p>
 The state is an instance of React Component Class can be defined as an object of a set of observable properties that control the behavior of the component. In other words, the State of a component is an object that holds some information that may change over the lifetime of the component.
 </p>
@@ -365,9 +365,9 @@ We have already learned about Props and we got to know that Props is also an obj
 </div>
 </div>
 
-<div id="outline-container-orgab50e9c" class="outline-3">
-<h3 id="orgab50e9c">Express.js and Node.js Server Tier</h3>
-<div class="outline-text-3" id="text-orgab50e9c">
+<div id="outline-container-org131d9af" class="outline-3">
+<h3 id="org131d9af">Express.js and Node.js Server Tier</h3>
+<div class="outline-text-3" id="text-org131d9af">
 <p>
 The next level down is the Express.js server-side framework, running inside a Node.js server. Express.js bills itself as a “fast, unopinionated, minimalist web framework for Node.js,” and that is indeed exactly what it is. Express.js has powerful models for URL routing (matching an incoming URL with a server function), and handling HTTP requests and responses.
 </p>
@@ -378,9 +378,9 @@ By making XML HTTP Requests (XHRs) or GETs or POSTs from your Angular.js front-e
 </div>
 </div>
 
-<div id="outline-container-orga235b72" class="outline-3">
-<h3 id="orga235b72">MongoDB Database Tier</h3>
-<div class="outline-text-3" id="text-orga235b72">
+<div id="outline-container-org1c45097" class="outline-3">
+<h3 id="org1c45097">MongoDB Database Tier</h3>
+<div class="outline-text-3" id="text-org1c45097">
 <p>
 If your application stores any data (user profiles, content, comments, uploads, events, etc.), then you’re going to want a database that’s just as easy to work with as Angular, Express, and Node.
 </p>
@@ -391,9 +391,9 @@ That’s where MongoDB comes in: JSON documents created in your Angular.js front
 </div>
 </div>
 
-<div id="outline-container-org8ada565" class="outline-3">
-<h3 id="org8ada565">REST vs GraphQL</h3>
-<div class="outline-text-3" id="text-org8ada565">
+<div id="outline-container-org02c9831" class="outline-3">
+<h3 id="org02c9831">REST vs GraphQL</h3>
+<div class="outline-text-3" id="text-org02c9831">
 <p>
 <b>REST</b>: It is an acronym for <b>Representational State Transfer</b>. REST is an API design style architecture to create web services(APIs).
 Features of RESTful architecture:
@@ -431,9 +431,9 @@ Similarities between REST and GraphQL:
 </div>
 </div>
 
-<div id="outline-container-org8e11dd1" class="outline-2">
-<h2 id="org8e11dd1">Dependencies used</h2>
-<div class="outline-text-2" id="text-org8e11dd1">
+<div id="outline-container-orgacec5d4" class="outline-2">
+<h2 id="orgacec5d4">Dependencies used</h2>
+<div class="outline-text-2" id="text-orgacec5d4">
 <ul class="org-ul">
 <li>react-router-dom</li>
 <li>react-transition-group</li>
@@ -442,18 +442,18 @@ Similarities between REST and GraphQL:
 </div>
 </div>
 
-<div id="outline-container-org17e4a0f" class="outline-2">
-<h2 id="org17e4a0f">Third Party Services Used</h2>
-<div class="outline-text-2" id="text-org17e4a0f">
+<div id="outline-container-org8115233" class="outline-2">
+<h2 id="org8115233">Third Party Services Used</h2>
+<div class="outline-text-2" id="text-org8115233">
 <ul class="org-ul">
 <li>MapBox</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org49d8e92" class="outline-2">
-<h2 id="org49d8e92">Useful Resources &amp; Links</h2>
-<div class="outline-text-2" id="text-org49d8e92">
+<div id="outline-container-orgce1ee84" class="outline-2">
+<h2 id="orgce1ee84">Useful Resources &amp; Links</h2>
+<div class="outline-text-2" id="text-orgce1ee84">
 <ul class="org-ul">
 <li><a href="https://reactjs.org/docs/getting-started.html">Official React Docs</a></li>
 
@@ -484,6 +484,8 @@ Similarities between REST and GraphQL:
 <li><a href="https://nodejs.org/en/docs/">Official Node.js Docs</a></li>
 
 <li><a href="https://expressjs.com/">Official Express.js Docs</a></li>
+
+<li><a href="https://docs.mapbox.com/api/search/">GeoCoding</a></li>
 </ul>
 </div>
 </div>
@@ -491,7 +493,7 @@ Similarities between REST and GraphQL:
 <div id="postamble" class="status">
 <p class="date">Date: 10-10-2020</p>
 <p class="author">Author: Martim Lima</p>
-<p class="date">Created: 2020-10-18 dom 17:52</p>
+<p class="date">Created: 2020-10-20 ter 14:17</p>
 </div>
 </body>
 </html>

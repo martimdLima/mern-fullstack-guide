@@ -1,28 +1,18 @@
-require('dotenv').config();
+require("dotenv").config();
 
+const { MONGODB_KEY } = process.env;
+const mongoose = require("mongoose");
 const express = require("express");
 const bodyParser = require("body-parser");
-
 const placesRoutes = require("./routes/places-routes");
 const usersRoutes = require("./routes/users-routes");
 const HttpError = require("./models/http-error");
-const {getCoordsForAddress} = require("./util/location");
-
 const app = express();
 
 app.use(bodyParser.json());
 
 app.use("/api/places", placesRoutes);
 app.use("/api/users", usersRoutes);
-
-/* try {
-  let coords = await getCoordsForAddress("https://ancientworldwonders.com/uploads/Pyramids_of_Giza.jpg");
-  console.log(coords);
-} catch(err) {
-  console.log(err);
-} */
-
-getCoordsForAddress("https://ancientworldwonders.com/uploads/Pyramids_of_Giza.jpg").then().catch();
 
 app.use((req, res, next) => {
   const error = new HttpError("Could not find this route.", 404);
@@ -37,4 +27,17 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "An unknown error occurred!" });
 });
 
-app.listen(5000);
+mongoose
+  .connect(
+    "mongodb+srv://mdlima:" +
+      `${MONGODB_KEY}` +
+      "@cluster0.8qaxe.mongodb.net/places?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => {
+    console.log("Connected to database!");
+    app.listen(3000);
+  })
+  .catch((error) => {
+    console.log("Connection failed!");
+  });
