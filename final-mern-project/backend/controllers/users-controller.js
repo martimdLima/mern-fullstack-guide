@@ -1,6 +1,9 @@
 const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const HttpError = require("../models/http-error");
 const User = require("../models/user");
+const { JWT_SERVER_KEY } = process.env;
 
 const getUsers = async (req, res, next) => {
   let users;
@@ -49,11 +52,23 @@ const signup = async (req, res, next) => {
     return next(error);
   }
 
+  let hashedPwd;
+
+  try {
+    hashedPwd = await bcrypt.hash(password, 12);
+  } catch (err) {
+    const error = new HttpError(
+      "Could not create the user, please try again later",
+      500
+    );
+    return next(error);
+  }
+
   const newUser = new User({
     name,
     email,
     image: req.file.path,
-    password,
+    password: hashedPwd,
     places: [],
   });
 
@@ -69,11 +84,31 @@ const signup = async (req, res, next) => {
     return next(error);
   }
 
-  res.status(201).json({ user: newUser.toObject({ getters: true }) });
+  let jwtToken;
+
+  try {
+    jwtToken = jwt.sign(
+      { userId: newUser.id, email: newUser.email },
+      `${JWT_SERVER_KEY}`,
+      { expiresIn: "1h" }
+    );
+  } catch (err) {
+    const error = new HttpError(
+      "Signing up failed, please try again later.",
+      500
+    );
+    return next(error);
+  }
+
+  res
+    .status(201)
+    .json({ userId: newUser.id, email: newUser.email, token: jwtToken });
 };
 
 const login = async (req, res, next) => {
   const { email, password } = req.body;
+
+  console.log(`${JWT_SERVER_KEY}`);
 
   let existingUser;
 
@@ -87,17 +122,54 @@ const login = async (req, res, next) => {
     return next(error);
   }
 
-  if (!existingUser || existingUser.password !== password) {
+  if (!existingUser) {
     const error = new HttpError(
       "Invalid credentials, please provide valid credentials for loggging in",
+      403
+    );
+    return next(error);
+  }
+
+  let isValidPwd = false;
+
+  try {
+    isValidPwd = await bcrypt.compare(password, existingUser.password);
+  } catch (err) {
+    const error = new HttpError(
+      "Could not login, please provide valid credentials for loggging in",
+      500
+    );
+    next(error);
+  }
+
+  if (!isValidPwd) {
+    const error = new HttpError(
+      "Could not login, please provide valid credentials for loggging in",
+      403
+    );
+    next(error);
+  }
+
+  let jwtToken;
+
+  try {
+    jwtToken = jwt.sign(
+      { userId: existingUser.id, email: existingUser.email },
+      `${JWT_SERVER_KEY}`,
+      { expiresIn: "1h" }
+    );
+  } catch (err) {
+    const error = new HttpError(
+      "Signing up failed, please try again later.",
       500
     );
     return next(error);
   }
 
   res.json({
-    message: "Logged in!",
-    user: existingUser.toObject({ getters: true }),
+    userId: existingUser.id,
+    email: existingUser.email,
+    token: jwtToken,
   });
 };
 

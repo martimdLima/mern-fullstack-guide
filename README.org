@@ -114,6 +114,8 @@ Similarities between REST and GraphQL:
 + mongoose-unique-validator,
 + multer
 + mapbox-gl
++ bcryptjs
++ jsonwebtoken
 
 * Third Party Services Used
 + MapBox
@@ -151,3 +153,5 @@ Similarities between REST and GraphQL:
 + [[https://expressjs.com/][Official Express.js Docs]]
 
 + [[https://docs.mapbox.com/api/search/][GeoCoding]]
+
++ [[https://jwt.io/][JsonWebTokens]]
