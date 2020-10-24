@@ -105,6 +105,14 @@ Similarities between REST and GraphQL:
 * Dependencies used
 + react-router-dom
 + react-transition-group
++ axios,
++ body-parser,
++ dotenv,
++ express,
++ express-validator,
++ mongoose,
++ mongoose-unique-validator,
++ multer
 + mapbox-gl
 
 * Third Party Services Used

@@ -52,8 +52,7 @@ const signup = async (req, res, next) => {
   const newUser = new User({
     name,
     email,
-    image:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.sndcdn.com%2Fartworks-000521000814-kjs029-t500x500.jpg&f=1&nofb=1",
+    image: req.file.path,
     password,
     places: [],
   });

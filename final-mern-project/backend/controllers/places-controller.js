@@ -1,3 +1,4 @@
+const fs = require("fs");
 const { validationResult } = require("express-validator");
 const mongoose = require("mongoose");
 
@@ -5,7 +6,6 @@ const HttpError = require("../models/http-error");
 const getCoordsForAddress = require("../util/location");
 const Place = require("../models/place");
 const User = require("../models/user");
-const user = require("../models/user");
 
 const getPlaceById = async (req, res, next) => {
   const placeId = req.params.pid; // { pid: 'p1' }
@@ -34,31 +34,6 @@ const getPlaceById = async (req, res, next) => {
 
 const getPlacesByUserId = async (req, res, next) => {
   const userId = req.params.uid;
-
-  /*   
-  let places;
-
-  try {
-    places = await Place.find({ creator: userId });
-  } catch (err) {
-    return next(
-      new HttpError(
-        "Failed fetching the places for the requested user, please try again later",
-        500
-      )
-    );
-  }
-  if (!places || places.length === 0) {
-    const error = new HttpError(
-      "Could not find a place for the provided user id.",
-      404
-    );
-    return next(error);
-  }
-
-  res.json({
-    places: places.map((place) => place.toObject({ getters: true })),
-  }); */
 
   let userWithPlaces;
 
@@ -108,7 +83,7 @@ const createPlace = async (req, res, next) => {
   const createdPlace = new Place({
     title,
     description,
-    image: "https://ancientworldwonders.com/uploads/Pyramids_of_Giza.jpg",
+    image: req.file.path,
     address,
     location: coordinates,
     creator,
@@ -217,6 +192,8 @@ const deletePlace = async (req, res, next) => {
     return next(error);
   }
 
+  const imgPath = place.image;
+
   try {
     const sess = await mongoose.startSession();
     sess.startTransaction();
@@ -231,6 +208,10 @@ const deletePlace = async (req, res, next) => {
     );
     return next(error);
   }
+
+  fs.unlink(imgPath, (err) => {
+    console.log(err);
+  });
 
   res.status(200).json({ message: "Deleted place" });
 };
