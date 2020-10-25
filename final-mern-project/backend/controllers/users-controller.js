@@ -72,8 +72,6 @@ const signup = async (req, res, next) => {
     places: [],
   });
 
-  console.log(newUser);
-
   try {
     await newUser.save();
   } catch (err) {
@@ -107,8 +105,6 @@ const signup = async (req, res, next) => {
 
 const login = async (req, res, next) => {
   const { email, password } = req.body;
-
-  console.log(`${JWT_SERVER_KEY}`);
 
   let existingUser;
 

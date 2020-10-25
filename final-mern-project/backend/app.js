@@ -1,5 +1,7 @@
 require("dotenv").config();
+const { MONGODB_USER } = process.env;
 const { MONGODB_KEY } = process.env;
+const { MONGODB_DB } = process.env;
 
 const fs = require("fs");
 const path = require("path");
@@ -49,9 +51,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://mdlima:" +
-      `${MONGODB_KEY}` +
-      "@cluster0.8qaxe.mongodb.net/mern?retryWrites=true&w=majority",
+    `mongodb+srv://${MONGODB_USER}:${MONGODB_KEY}@cluster0.8qaxe.mongodb.net/${MONGODB_DB}?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {

@@ -1,0 +1,9 @@
+{
+    "env": {
+        "MONGODB_USER": "mdlima",
+        "MONGODB_KEY": "MOvNHYSQ5QvEg4PB",
+        "MONGODB_DB": "mern",
+        "ACCESS_TOKEN": "pk.eyJ1IjoibWRsaW1hIiwiYSI6ImNrZ2locGJ5MzAzb3gyem1zdzQ3dWJ5dmMifQ.5M49p4-knLoc2cy6slxpuw",
+        "JWT_SERVER_KEY": "G3dEbNkPLCggXcEV2M"
+    }
+}

@@ -116,6 +116,7 @@ Similarities between REST and GraphQL:
 + mapbox-gl
 + bcryptjs
 + jsonwebtoken
++ uuid
 
 * Third Party Services Used
 + MapBox

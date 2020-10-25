@@ -23,7 +23,6 @@ async function getCoordsForAddress(address) {
       return resp.data.features;
     })
     .then((features) => {
-      //console.log(features[0].geometry);
       const [lng, lat] = features[0].center;
 
       return { lat, lng };
