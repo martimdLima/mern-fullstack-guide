@@ -1,12 +1,11 @@
 #+TITLE:     MERN Stack - The MERN Fullstack Guide
 #+AUTHOR:    Martim Lima
-#+EMAIL:     (concat "martim.d.lima" at-sign "protonmail.com")
+#+EMAIL:     martim.d.lima@protonmail.com
 #+DATE:      10-10-2020
 #+LANGUAGE:  en
-#+OPTIONS:   H:4 num:nil toc:2
+#+OPTIONS:   H:4 num:nil toc:2 email:t
 #+PROPERTY: header-args :dir ~/Documents/org/temp
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
-
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * MERN Fullstack Guide
 
@@ -102,7 +101,17 @@ Similarities between REST and GraphQL:
 + REST and GraphQL can fetch data with an HTTP GET method. However, the GraphQL API server usually has only one POST endpoint. Nevertheless, it is possible to use GET with GraphQL to fetch data.
 + REST and GraphQL identify every entity as a resource. Every resource has an ID associated with it.
 
-* Dependencies used
+* Course Project
+
+#+CAPTION: MERN Course Project
+#+ATTR_HTML: :alt mern stack :title Mern Course Project :align center
+#+ATTR_HTML: :width 100% :height 100%
+#+NAME:   fig:mern-course-project
+[[./course-project.gif]]
+
+[[https://mern-stack-course-292922.web.app/60537d753e8610001733bca8/places][YourPlaces]]
+
+** Dependencies used
 + react-router-dom
 + react-transition-group
 + axios,
@@ -118,7 +127,7 @@ Similarities between REST and GraphQL:
 + jsonwebtoken
 + uuid
 
-* Third Party Services Used
+** Third Party Services Used
 + MapBox
 
 * Useful Resources & Links

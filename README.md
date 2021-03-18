@@ -1,16 +1,20 @@
-- [MERN Fullstack Guide](#orge649bfa)
-- [How does the MERN stack work?](#orgc37d94d)
-  - [React.js Front End](#org41e1044)
-  - [Express.js and Node.js Server Tier](#org8b02f0c)
-  - [MongoDB Database Tier](#org6ea75b2)
-  - [REST vs GraphQL](#org9a36e54)
-- [Dependencies used](#orgf2975a1)
-- [Third Party Services Used](#org60dc7c0)
-- [Useful Resources & Links](#org4620300)
+
+# Table of Contents
+
+-   [MERN Fullstack Guide](#org0ffe8b4)
+-   [How does the MERN stack work?](#org60b1767)
+    -   [React.js Front End](#org3d76ccc)
+    -   [Express.js and Node.js Server Tier](#orge687a8a)
+    -   [MongoDB Database Tier](#orgbc98ebb)
+    -   [REST vs GraphQL](#orge75ae66)
+-   [Course Project](#org5de7abd)
+    -   [Dependencies used](#org2ad3aaf)
+    -   [Third Party Services Used](#org7f5ce18)
+-   [Useful Resources & Links](#orgacef4cd)
 
 
 
-<a id="orge649bfa"></a>
+<a id="org0ffe8b4"></a>
 
 # MERN Fullstack Guide
 
@@ -26,7 +30,7 @@ MERN is one of several variations of the MEAN stack (MongoDB Express Angular Nod
 Express and Node make up the middle (application) tier. Express.js is a server-side web framework, and Node.js the popular and powerful JavaScript server platform. Regardless of which variant you choose, ME(RVA)N is the ideal approach to working with JavaScript and JSON, all the way through.
 
 
-<a id="orgc37d94d"></a>
+<a id="org60b1767"></a>
 
 # How does the MERN stack work?
 
@@ -35,7 +39,7 @@ The MERN architecture allows you to easily construct a 3-tier architecture (fron
 ![img](https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png "MERN Stack Architecture")
 
 
-<a id="org41e1044"></a>
+<a id="org3d76ccc"></a>
 
 ## React.js Front End
 
@@ -77,7 +81,7 @@ We have already learned about Props and we got to know that Props is also an obj
 -   While Props are set by the parent component, State is generally updated by event handlers. For example, let us consider the toggle the theme of the GeeksforGeeks {IDE} page. It can be implemented using State where the probable values of the State can be either light or dark and upon selection, the IDE changes its color.
 
 
-<a id="org8b02f0c"></a>
+<a id="orge687a8a"></a>
 
 ## Express.js and Node.js Server Tier
 
@@ -86,7 +90,7 @@ The next level down is the Express.js server-side framework, running inside a No
 By making XML HTTP Requests (XHRs) or GETs or POSTs from your Angular.js front-end, you can connect to Express.js functions that power your application. Those functions in turn use MongoDB’s Node.js drivers, either via callbacks for using Promises, to access and update data in your MongoDB database.
 
 
-<a id="org6ea75b2"></a>
+<a id="orgbc98ebb"></a>
 
 ## MongoDB Database Tier
 
@@ -95,11 +99,12 @@ If your application stores any data (user profiles, content, comments, uploads, 
 That’s where MongoDB comes in: JSON documents created in your Angular.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. Again, if you’re building in the cloud, you’ll want to look at Atlas. If you’re looking to set up your own MERN stack, read on!
 
 
-<a id="org9a36e54"></a>
+<a id="orge75ae66"></a>
 
 ## REST vs GraphQL
 
-**REST**: It is an acronym for **Representational State Transfer**. REST is an API design style architecture to create web services(APIs). Features of RESTful architecture:
+**REST**: It is an acronym for **Representational State Transfer**. REST is an API design style architecture to create web services(APIs).
+Features of RESTful architecture:
 
 -   REST server implementation is simpler than its counterpart SOAP i.e. one of the reasons why it is popular among new developers.
 -   REST is stateless, the server doesn’t store the state of a client in form of sessions or anything else. Every request is a new request.
@@ -122,9 +127,18 @@ Similarities between REST and GraphQL:
 -   REST and GraphQL identify every entity as a resource. Every resource has an ID associated with it.
 
 
-<a id="orgf2975a1"></a>
+<a id="org5de7abd"></a>
 
-# Dependencies used
+# Course Project
+
+![img](./course-project.gif "MERN Course Project")
+
+[YourPlaces](https://mern-stack-course-292922.web.app/60537d753e8610001733bca8/places)
+
+
+<a id="org2ad3aaf"></a>
+
+## Dependencies used
 
 -   react-router-dom
 -   react-transition-group
@@ -137,16 +151,19 @@ Similarities between REST and GraphQL:
 -   mongoose-unique-validator,
 -   multer
 -   mapbox-gl
+-   bcryptjs
+-   jsonwebtoken
+-   uuid
 
 
-<a id="org60dc7c0"></a>
+<a id="org7f5ce18"></a>
 
-# Third Party Services Used
+## Third Party Services Used
 
 -   MapBox
 
 
-<a id="org4620300"></a>
+<a id="orgacef4cd"></a>
 
 # Useful Resources & Links
 
@@ -181,3 +198,6 @@ Similarities between REST and GraphQL:
 -   [Official Express.js Docs](https://expressjs.com/)
 
 -   [GeoCoding](https://docs.mapbox.com/api/search/)
+
+-   [JsonWebTokens](https://jwt.io/)
+
